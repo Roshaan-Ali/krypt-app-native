@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?page_default_bg"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        tools:context=".view.fragment.MoreMenuFragment">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/jost_semibold"
+            android:text="Menu"
+            android:textColor="?title_color"
+            android:textSize="38sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/calendarLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/calendar_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/clockLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/clock_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/airplaneLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/airplane_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/dndLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/dnd_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/torchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                android:clickable="true"
+                android:focusable="true"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:id="@+id/torch"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/flash_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/settingLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/setting_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom">
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/calculatorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/calculator_icon"
+                    app:tint="@color/white" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/translatorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                android:clickable="true"
+                android:focusable="true"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/translator_icon"
+                    app:tint="@color/white" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/unitConverterLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/unit_converter_icon" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/third">
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/wallet_icon"
+                    app:tint="@color/white" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+
+            <net.orandja.shadowlayout.ShadowLayout
+                android:id="@+id/currencyConverter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/black_oval_gradient_bg"
+                app:shadow_cast_only_background="true"
+                app:shadow_color="@color/shadow"
+                app:shadow_radius="10"
+                app:shadow_with_color="false"
+                app:shadow_with_css_scale="true"
+                app:shadow_with_dpi_scale="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:src="@drawable/currency_converter_icon"
+                    app:tint="@color/white" />
+
+            </net.orandja.shadowlayout.ShadowLayout>
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

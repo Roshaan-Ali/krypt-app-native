@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/chat">
+
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.pyra.krpytapplication.view.fragment.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chat_to_addContactDialog"
+            app:destination="@id/addContactDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.pyra.krpytapplication.view.fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/vaultPassDialogFragment"
+        android:name="com.pyra.krpytapplication.view.fragment.VaultFragment"
+        android:label="VaultFragment"
+        tools:layout="@layout/fragment_vault_pass_dialog" />
+
+    <dialog
+        android:id="@+id/vault"
+        android:name="com.pyra.krpytapplication.view.fragment.VaultPassDialogFragment"
+        android:label="fragment_vault_pass_dialog"
+        tools:layout="@layout/fragment_vault_pass_dialog">
+        <action
+            android:id="@+id/action_vault_to_vaultPassDialogFragment"
+            app:destination="@id/vault" />
+    </dialog>
+    <dialog
+        android:id="@+id/addContactDialog"
+        android:name="com.pyra.krpytapplication.view.fragment.AddContactDialog"
+        android:label="fragment_add_contact_dialog"
+        tools:layout="@layout/fragment_add_contact_dialog" />
+    <fragment
+        android:id="@+id/moreMenuFragment"
+        android:name="com.pyra.krpytapplication.view.fragment.MoreMenuFragment"
+        android:label="MoreMenuFragment"
+        tools:layout="@layout/fragment_more_menu" />
+
+</navigation>

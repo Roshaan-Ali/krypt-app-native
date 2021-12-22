@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#edbe02</color>
+    <color name="colorPrimaryDark">#1F2A3D</color>
+    <color name="colorAccent">#edbe02</color>
+
+    <!--    dark theme  1F2A3D  -->
+    <color name="dark_page_bg">#32373d</color>
+    <color name="dark_toolbar_color">#394351</color>
+    <color name="dark_toolbar_icon_tint">#ffffff</color>
+    <color name="dark_toolbar_text_color">#ffffff</color>
+
+
+    <color name="dialog_text_color">#F1F1F1</color>
+    <color name="dark_toolbar_search_color">#000000</color>
+
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_grey">#707275</color>
+    <color name="green_color">#18E247</color>
+    <color name="inactive_white_color">#707070</color>
+    <color name="active_white_color">#FFFFFF</color>
+
+    <color name="active_text_color">#FFFFFF</color>
+    <color name="inactive_text_color">#33FFFFFF</color>
+
+    <color name="text_hint_color_white">#ffffff</color>
+    <color name="text_border_color_hint">#40ffffff</color>
+    <color name="text_color_content">#919191</color>
+    <color name="grey_icon_tint">#919191</color>
+    <color name="negative_text_color">#EE476E</color>
+    <color name="positive_bg_color">#18E247</color>
+    <color name="selected_bg">#1A0B68DF</color>
+
+
+    <!--    light theme-->
+    <color name="light_page_bg">#FFFFFF</color>
+    <color name="light_toolbar_color">#E6ECF4</color>
+    <color name="light_toolbar_icon_tint">#15171A</color>
+    <color name="light_toolbar_text_color">#15171A</color>
+
+    <color name="dialog_text_color_light">#15171A</color>
+    <color name="light_toolbar_search_color">#FFFFFF</color>
+
+    <color name="text_color_white_light">#26272b</color>
+    <color name="text_color_grey_light">#707275</color>
+    <color name="green_color_light">#18E247</color>
+
+    <color name="inactive_white_color_light">#707070</color>
+    <color name="active_white_color_light">#0B68DF</color>
+
+
+    <color name="active_text_color_light">#000000</color>
+    <color name="inactive_text_color_light">#33000000</color>
+
+    <color name="text_hint_color_white_light">#919191</color>
+    <color name="text_border_color_hint_light">#919191</color>
+    <color name="text_color_content_light">#000000</color>
+
+    <color name="grey_icon_tint_light">#919191</color>
+    <color name="negative_text_color_light">#EE476E</color>
+    <color name="positive_bg_color_light">#18E247</color>
+    <color name="selected_bg_light">#1A0B68DF</color>
+
+    <color name="text_color_heading">#000000</color>
+    <color name="transparent_gray">#906f6f6f</color>
+
+    <color name="white_trans">#44ffffff</color>
+
+    <color name="bg_one">#0B68DF</color>
+    <color name="bg_two">#E19908</color>
+    <color name="bg_three">#2FA5C9</color>
+    <color name="bg_four">#DF0BC4</color>
+    <color name="red_color">#FF3535</color>
+
+    <color name="semitrans">#22000000</color>
+
+    <color name="localBackground">#827b92</color>
+    <color name="remoteBackground">#484258</color>
+    <color name="videoicon_color">#3C7ADB</color>
+
+    <color name="green">#499f75</color>
+
+
+    <color name="chat_unselected">#00000000</color>
+    <color name="chat_selected">#5503A9F4</color>
+
+    <color name="reciver_text_bg">#2554c7</color>
+    <color name="selectedChatColor">#440B68DF</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+
+
+    <color name="colorE">#c4c4c4</color>
+    <color name="replyBackground">#DADADA</color>
+
+
+    <color name="keyboard_background">#34495e</color>
+    <color name="keyboard_divider">#2c3e50</color>
+    <color name="keyboard_key_pressed">#95a5a6</color>
+
+
+    <color name="disable_view_bg">#22827b92</color>
+
+    <color name="default_chat_bubble">#0B68DF</color>
+
+    <!--  Color define by Minhal  -->
+    <color name="white">#ffffff</color>
+    <color name="yellow">#dead06</color>
+    <color name="dark">#26272b</color>
+    <color name="grey">#828588</color>
+    <color name="ripple_color">#5A5C5E</color>
+    <color name="bottom_view">#2b2d32</color>
+    <color name="dark_two">#2b2f35</color>
+    <color name="grey_two">#6b6e72</color>
+    <color name="blue">#0B68DF</color>
+    <color name="dialog_bg">#18191d</color>
+    <color name="yellow_gradient_start">#bf7a08</color>
+    <color name="yellow_gradient_end">#fbd433</color>
+    <color name="black_gradient_start">#1a1b1d</color>
+    <color name="black_gradient_end">#3b4047</color>
+    <color name="unselected_gradient_start">#292a2f</color>
+    <color name="unselected_gradient_end">#30343a</color>
+    <color name="morph_gradient_start">#27282d</color>
+    <color name="morph_gradient_end">#32373d</color>
+    <color name="red_circle">#fe6764</color>
+    <color name="selected_msg">#1d1e22</color>
+    <color name="shadow">#202224</color>
+</resources>

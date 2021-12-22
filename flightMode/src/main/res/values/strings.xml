@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">FMode</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">FModeOnOff</string>    
+    <string name="RadioButton1">Flight mode on</string>
+    <string name="RadioButton2">WLAN on</string>
+    <string name="RadioButton3">GPRS on</string>
+    <string name="RadioButton4">Do nothing</string>
+    <string name="CheckBox1">GPS set</string>
+    <string name="CheckBox2">GPS status</string>
+    <string name="CheckBox3">Screen keep on</string>
+
+</resources>

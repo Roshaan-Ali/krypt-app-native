@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="4dp"
+        android:background="?page_default_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        tools:ignore="Deprecated,MissingPrefix,RtlHardcoded">
+
+        <RelativeLayout
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_profile_icon_blue"
+                    app:civ_border_width="0dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/lastMsgTime"
+                android:singleLine="true"
+                android:text="Mary Ann Collins"
+                android:textColor="?title_color"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/lastMsgTime"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/userStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="last seen at 1.21 AM"
+                    android:textColor="?sub_title_color"
+                    android:textSize="14sp"
+                    tools:ignore="Deprecated" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

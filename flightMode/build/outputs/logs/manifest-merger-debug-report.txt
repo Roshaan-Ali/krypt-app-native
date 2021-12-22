@@ -1,0 +1,61 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:1:1-25:12
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:1:1-25:12
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:1:1-25:12
+	package
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:2:5-37
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:4:5-30
+	xmlns:android
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:3:5-28
+uses-sdk
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+	android:targetSdkVersion
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:7:9-34
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+		INJECTED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:10:5-73
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:10:22-70
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:11:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:12:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:15:5-68
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:15:22-65
+application
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:18:5-24:19
+activity#com.example.flightmode.MainFlightActivity
+ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:19:9-23:20
+	android:label
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:21:13-56
+	android:name
+		ADDED from C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:20:13-47

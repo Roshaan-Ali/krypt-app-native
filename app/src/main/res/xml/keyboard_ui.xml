@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="3px"
+    android:verticalGap="3px"
+    android:keyHeight="60dp">
+
+<Row>
+<Key android:keyLabel="1" android:keyEdgeFlags="left" android:codes="0"/>
+<Key android:keyLabel="2" android:codes="1"/>
+<Key android:keyLabel="3" android:codes="2"/>
+<Key android:keyLabel="4" android:codes="3"/>
+<Key android:keyLabel="5" android:codes="4"/>
+<Key android:keyLabel="6" android:codes="5"/>
+<Key android:keyLabel="7" android:codes="6"/>
+<Key android:keyLabel="8" android:codes="7"/>
+<Key android:keyLabel="9" android:codes="8"/>
+<Key android:keyLabel="0" android:keyEdgeFlags="right" android:codes="9"/>
+</Row>
+
+    <Row>
+        <Key android:keyLabel="q" android:keyEdgeFlags="left" android:codes="10"/>
+        <Key android:keyLabel="w" android:codes="11"/>
+        <Key android:keyLabel="e" android:codes="12"/>
+        <Key android:keyLabel="r" android:codes="13"/>
+        <Key android:keyLabel="t" android:codes="14"/>
+        <Key android:keyLabel="y" android:codes="15"/>
+        <Key android:keyLabel="u" android:codes="16"/>
+        <Key android:keyLabel="i" android:codes="17"/>
+        <Key android:keyLabel="o" android:codes="18"/>
+        <Key android:keyLabel="p" android:keyEdgeFlags="right" android:codes="19"/>
+    </Row>
+
+    <Row>
+        <Key android:keyLabel="a" android:keyEdgeFlags="left" android:codes="20" android:keyWidth="15%p" />
+        <Key android:keyLabel="s" android:codes="21" android:keyWidth="10%p"/>
+        <Key android:keyLabel="d" android:codes="22" android:keyWidth="10%p"/>
+        <Key android:keyLabel="f" android:codes="23" android:keyWidth="10%p"/>
+        <Key android:keyLabel="g" android:codes="24" android:keyWidth="10%p"/>
+        <Key android:keyLabel="h" android:codes="25" android:keyWidth="10%p"/>
+        <Key android:keyLabel="j" android:codes="26" android:keyWidth="10%p"/>
+        <Key android:keyLabel="k" android:codes="27" android:keyWidth="10%p" />
+        <Key android:keyLabel="l" android:codes="28" android:keyEdgeFlags="right" android:keyWidth="15%p" />
+    </Row>
+
+    <Row>
+        <Key android:keyLabel="@string/keyboard_key_caps_key_idle" android:keyEdgeFlags="left" android:codes="1000" android:keyWidth="15%p"/>
+        <Key android:keyLabel="z" android:codes="30" android:keyWidth="10%p" />
+        <Key android:keyLabel="x" android:codes="31" android:keyWidth="10%p"/>
+        <Key android:keyLabel="c" android:codes="32" android:keyWidth="10%p"/>
+        <Key android:keyLabel="v" android:codes="33" android:keyWidth="10%p"/>
+        <Key android:keyLabel="b" android:codes="34" android:keyWidth="10%p"/>
+        <Key android:keyLabel="n" android:codes="35" android:keyWidth="10%p"/>
+        <Key android:keyLabel="m" android:codes="36" android:keyWidth="10%p"/>
+        <Key android:keyLabel="@string/keyboard_key_delete" android:keyEdgeFlags="right" android:codes="1001" android:keyWidth="15%p"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyLabel="1#?" android:keyWidth="15%p" android:keyEdgeFlags="left" android:codes="1002"/>
+
+
+        <Key android:keyLabel="," android:keyWidth="10%p" android:codes="39"/>
+        <Key android:keyLabel="krypt(en)" android:keyWidth="45%p" android:isRepeatable="true" android:codes="1003"/>
+        <Key android:keyLabel="." android:keyWidth="10%p" android:isRepeatable="true" android:codes="41"/>
+        <Key android:keyLabel="@string/keyboard_key_enter" android:keyWidth="20%p" android:keyEdgeFlags="right" android:codes="1004"/>
+    </Row>
+
+
+</Keyboard>

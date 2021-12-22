@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?page_default_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1Krypt Acceptable Use Policy"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:theme="@style/AuthScreenTitleStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/termsDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/terms_services"
+            android:theme="@style/ProfileTextStyle" />
+
+        <CheckBox
+            android:id="@+id/termsCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color_grey"
+            android:text="Accept terms and condition"
+            android:textColor="?title_color"
+            android:theme="@style/ProfileTextStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:background="@drawable/round_black_btn_bg"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonStyle" />
+
+            <View
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/proceedBtn"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:background="@drawable/round_yellow_btn_bg"
+                android:text="Proceed"
+                android:theme="@style/ButtonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

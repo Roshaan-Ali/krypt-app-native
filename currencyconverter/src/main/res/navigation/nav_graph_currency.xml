@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainGraph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.nicoqueijo.android.currencyconverter.kotlin.view.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_watchlistFragment"
+            app:destination="@id/currencyGraph"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.nicoqueijo.android.currencyconverter.kotlin.view.ErrorFragment"
+        android:label="ErrorFragment"
+        tools:layout="@layout/fragment_error">
+        <action
+            android:id="@+id/action_errorFragment_to_splashFragment"
+            app:destination="@id/splashFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/errorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation
+        android:id="@+id/currencyGraph"
+        app:startDestination="@id/watchlistFragment">
+        <fragment
+            android:id="@+id/watchlistFragment"
+            android:name="com.nicoqueijo.android.currencyconverter.kotlin.view.WatchlistFragment"
+            android:label="WatchlistFragment"
+            tools:layout="@layout/fragment_watchlist">
+            <action
+                android:id="@+id/action_watchlistFragment_to_selectorFragment"
+                app:destination="@id/selectorFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/selectorFragment"
+            android:name="com.nicoqueijo.android.currencyconverter.kotlin.view.SelectorFragment"
+            android:label="SelectorFragment"
+            tools:layout="@layout/fragment_selector" />
+    </navigation>
+</navigation>

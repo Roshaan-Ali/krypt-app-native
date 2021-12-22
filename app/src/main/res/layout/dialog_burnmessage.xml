@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:cardBackgroundColor="?dialog_bg"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_50sdp">
+
+                <TextView
+                    android:id="@+id/dialog_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/burn_message"
+                    android:theme="@style/BurnMessageTitleStyle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager
+                    android:id="@+id/unitSelector"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:clipToPadding="false"
+                    android:elevation="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_45sdp"
+                    android:paddingBottom="@dimen/_45sdp"
+                    app:layout_constraintEnd_toStartOf="@id/timeSelector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dialog_title"
+                    app:rvp_triggerOffset="0.1" />
+
+                <com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager
+                    android:id="@+id/timeSelector"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:clipToPadding="false"
+                    android:elevation="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_45sdp"
+                    android:paddingBottom="@dimen/_45sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/unitSelector"
+                    app:layout_constraintTop_toBottomOf="@+id/dialog_title"
+                    app:rvp_triggerOffset="0.1" />
+
+                <View
+                    android:id="@+id/outer_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_155sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/burn_time_bg"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/timeSelector"
+                    app:layout_constraintEnd_toEndOf="@+id/timeSelector"
+                    app:layout_constraintStart_toStartOf="@+id/timeSelector"
+                    app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/selected_burntime_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/timeSelector"
+                    app:layout_constraintEnd_toEndOf="@+id/timeSelector"
+                    app:layout_constraintStart_toStartOf="@+id/timeSelector"
+                    app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:elevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/timeSelector"
+                    app:layout_constraintEnd_toEndOf="@+id/timeSelector"
+                    app:layout_constraintStart_toStartOf="@+id/timeSelector"
+                    app:layout_constraintTop_toTopOf="@+id/timeSelector" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/cardView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:layout_marginTop="-25dp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/round_yellow_btn_bg"
+        android:text="Apply"
+        android:theme="@style/ButtonStyle" />
+
+    <RelativeLayout
+        android:id="@+id/backIcon"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_alignEnd="@id/cardView"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/black_oval_background">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_clear" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

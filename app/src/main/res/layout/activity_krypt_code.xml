@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootView"
+    android:layout_height="match_parent"
+    android:background="?page_default_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".view.activity.KryptCodeActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/jost_bold"
+        android:text="@string/generate_krypt_code"
+        android:textColor="?title_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <net.orandja.shadowlayout.ShadowLayout
+        android:id="@+id/profileIconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:background="@drawable/black_oval_gradient_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:shadow_cast_only_background="true"
+        app:shadow_color="@color/shadow"
+        app:shadow_radius="10"
+        app:shadow_with_color="false"
+        app:shadow_with_css_scale="true"
+        app:shadow_with_dpi_scale="true">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/user_icon" />
+
+    </net.orandja.shadowlayout.ShadowLayout>
+
+    <net.orandja.shadowlayout.ShadowLayout
+        android:id="@+id/generateKryptLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_yellow_btn_bg"
+        app:layout_constraintTop_toBottomOf="@+id/profileIconLayout"
+        app:shadow_cast_only_background="true"
+        app:shadow_color="@color/shadow"
+        app:shadow_radius="10"
+        app:shadow_with_color="false"
+        app:shadow_with_css_scale="true"
+        app:shadow_with_dpi_scale="true">
+
+        <Button
+            android:id="@+id/generateKrypt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_yellow_btn_bg"
+            android:onClick="onGenerateButtonClicked"
+            android:text="@string/generate_krypt_code"
+            android:theme="@style/ButtonStyle" />
+
+    </net.orandja.shadowlayout.ShadowLayout>
+
+    <net.orandja.shadowlayout.ShadowLayout
+        android:id="@+id/enterKryptLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/round_yellow_btn_bg"
+        app:layout_constraintTop_toBottomOf="@+id/generateKryptLayout"
+        app:shadow_cast_only_background="true"
+        app:shadow_color="@color/shadow"
+        app:shadow_radius="10"
+        app:shadow_with_color="false"
+        app:shadow_with_css_scale="true"
+        app:shadow_with_dpi_scale="true">
+
+        <Button
+            android:id="@+id/enterKrypt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_black_btn_bg"
+            android:onClick="onKryptButtonClicked"
+            android:text="@string/enter_krypt_code"
+            android:textColor="?sub_title_color"
+            android:theme="@style/ButtonStyle" />
+
+    </net.orandja.shadowlayout.ShadowLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

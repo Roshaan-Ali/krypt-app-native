@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?page_default_bg"
+    tools:context=".view.fragment.VideoFragment">
+
+
+
+    <androidx.camera.view.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lensFacing="back"
+        app:scaleType="fitCenter"
+        app:pinchToZoomEnabled="true"
+        app:captureMode="mixed"
+        app:flash="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/timer"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/video_Record_Btn"
+        android:layout_margin="@dimen/spacing_large"/>
+
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_maxElementsWrap="3"
+        app:flow_horizontalStyle="spread"
+        app:flow_wrapMode="aligned"
+        app:flow_verticalStyle="spread_inside"
+        android:layout_marginBottom="@dimen/shutter_button_margin"
+        app:constraint_referenced_ids="video_upload_button,video_Record_Btn,video_delete"/>
+
+
+
+
+    <ImageButton
+        android:id="@+id/video_upload_button"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginBottom="@dimen/shutter_button_margin"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_baseline_cloud_upload_24"
+        android:contentDescription="@string/switch_camera_button_alt" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/video_Record_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/shutter_button_margin"
+        android:button="@drawable/ic_video_shutter"
+        android:contentDescription="@string/capture_button_alt" />
+
+
+
+    <ImageButton
+        android:id="@+id/video_delete"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginBottom="@dimen/shutter_button_margin"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_delete"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/gallery_button_alt" />
+
+    <ProgressBar
+        android:id="@+id/videoUpldProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progressbar"
+        android:background="@drawable/circleprogress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/videoPreviewImg"
+        app:layout_constraintHeight_percent="0.5"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/videoPreviewActionGroup"
+        app:constraint_referenced_ids="video_Record_Btn,camera_view,timer"/>
+
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoActionsGroup"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="videoPlayButton,video_upload_button,video_delete,videoPreviewImg"/>
+
+    <ImageButton
+        android:id="@+id/videoPlayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/transparent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_play_circle" />
+
+    <ProgressBar
+        android:id="@+id/videoProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="false"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

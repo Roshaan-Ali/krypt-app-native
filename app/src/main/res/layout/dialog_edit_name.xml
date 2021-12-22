@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?page_default_bg"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolBar"
+        app:cardBackgroundColor="@color/dark_toolbar_color"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_62sdp"
+        android:translationY="-10dp" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        app:layout_constraintStart_toStartOf="@+id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        android:layout_width="@dimen/_19sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:tint="?toolbar_icon_color" />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="?regularFont"
+        android:text="@string/edit_name"
+        android:textColor="?toolbar_text_color"
+        android:textSize="@dimen/_11sdp" />
+
+    <ImageView
+        android:id="@+id/doneIcon"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/ic_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:background="?colorAccent"
+        android:id="@+id/editNameBg"
+        app:layout_constrainedWidth="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_height="@dimen/_30sdp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/editNameBg"
+        app:layout_constraintEnd_toEndOf="@id/editNameBg"
+        app:layout_constrainedWidth="true"
+        android:hint="@string/edit_name"
+        android:textColorHint="?text_color_hint"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constrainedHeight="true"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@id/editNameBg"
+        app:layout_constraintBottom_toBottomOf="@id/editNameBg"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:imeOptions="flagNoPersonalizedLearning"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

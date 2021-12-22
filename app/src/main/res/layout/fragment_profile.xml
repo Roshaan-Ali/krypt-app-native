@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/parentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?page_default_bg"
+            android:orientation="vertical"
+            tools:context=".view.fragment.ProfileFragment">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="@dimen/_19sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/back_icon"
+                    android:visibility="visible"
+                    app:tint="?toolbar_icon_color" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/backButton"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_toEndOf="@id/backButton"
+                    android:text="@string/account"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileImageLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/jost_semibold"
+                    android:textColor="?title_color"
+                    android:textSize="26sp"
+                    tools:text="@string/demo_user_name" />
+
+                <ImageView
+                    android:id="@+id/editNameIcon"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/edit_icon"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/userStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/jost_regular"
+                    android:text="@string/available"
+                    android:textColor="?colorPrimary"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/profileImageLayout"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@id/title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/user" />
+
+                    <RelativeLayout
+                        android:id="@+id/editProfile"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/grey_oval_background">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/_6sdp"
+                            android:src="@drawable/camera_icon"
+                            app:tint="@color/emoji_black" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/kryptCodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/phoneNumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/krypt_code"
+                    android:theme="@style/ProfileLabelStyle" />
+
+                <TextView
+                    android:id="@+id/kryptCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phoneNumberText"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="+91 8754676789"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <ImageView
+                    android:id="@+id/copyCode"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="3dp"
+                    android:src="@drawable/copy_icon" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/kryptCode"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:alpha="0.2"
+                    android:background="?text_color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/availableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/availableText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/about"
+                    android:theme="@style/ProfileLabelStyle" />
+
+                <TextView
+                    android:id="@+id/currentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/availableText"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/available"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <ImageView
+                    android:id="@+id/editIcon"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/edit_gradient_icon" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/currentStatus"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:alpha="0.2"
+                    android:background="?text_color_hint" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/subscriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subscription"
+                    android:theme="@style/ProfileLabelStyle" />
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sub"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/start_date"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/start"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/not_updated"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <TextView
+                    android:id="@+id/end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/end_date"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/end"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/not_updated"
+                    android:theme="@style/ProfileTextStyle" />
+
+                <View
+                    android:id="@+id/view19"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/end"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:alpha="0.2"
+                    android:background="?text_color_hint" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/openWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="?mediumFont"
+                    android:gravity="center"
+                    android:text="Open Wallet"
+                    android:textColor="?toolbar_text_color"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/changePassLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings"
+                        android:theme="@style/ProfileLabelStyle" />
+
+                    <ImageView
+                        android:id="@+id/changePasswordImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_below="@id/textView2"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/change_password"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/changePasswordImage"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/changePasswordImage"
+                        android:text="@string/change_password"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView3"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/blockContactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/blockImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/blocked_contact"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toRightOf="@id/blockImage"
+                        android:text="@string/blocked_contacts"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView6"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/autoLogoutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/autoLockImg"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/logout"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/autoLockTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/autoLockImg"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/autoLockImg"
+                        android:text="@string/auto_logout"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <TextView
+                        android:id="@+id/autoLockTxtTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/autoLockTxt"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/_1_month"
+                        android:textColor="?colorPrimary"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/autoLockView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/autoLockTxt"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/deleteChatLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/deleteImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/delete_chat"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/deleteImage"
+                        android:text="@string/delete_all_chat"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView7"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/morphVoiceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/morphVoiceImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/morph_icon"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/morphVoiceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/morphVoiceImage"
+                        android:text="Morph Voice"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/morphVoice"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:thumbTint="@color/colorPrimary"
+                        app:sb_button_color="?page_default_bg"
+                        app:sb_checked_color="@color/colorPrimary"
+                        app:sb_show_indicator="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/morphVoiceLabel"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/morphFrequencyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/morphFrequencyImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/morph_icon"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/morphFrequencyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/morphFrequencyImage"
+                        android:text="Morph Frequency"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/morphFrequencyLabel"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/themeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/changeThemeImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/change_theme"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/changeThemeImage"
+                        android:text="@string/light_theme"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/darkTheme"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:thumbTint="@color/colorPrimary"
+                        app:sb_button_color="?page_default_bg"
+                        app:sb_checked_color="@color/colorPrimary"
+                        app:sb_show_indicator="false" />
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView8"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/changeThemeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/changeChatThemeImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/change_chat_theme"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/changeChatThemeImage"
+                        android:text="@string/change_chat_theme"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/textView9"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/enableVaultLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/vaultPasswordImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/vault_password_icon"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/vaultPasswordImage"
+                        android:text="@string/enable_vault_password"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/enableVaultPassword"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:thumbTint="@color/colorPrimary"
+                        app:sb_button_color="?page_default_bg"
+                        app:sb_checked_color="@color/colorPrimary"
+                        app:sb_show_indicator="false" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView17"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/enableBurnMessageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/burnDisableImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/burn_message"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/burnDisableImage"
+                        android:text="@string/enable_burn_message"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/burnDisableSwitch"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:thumbTint="@color/colorPrimary"
+                        app:sb_button_color="?page_default_bg"
+                        app:sb_checked_color="@color/colorPrimary"
+                        app:sb_show_indicator="false" />
+
+                    <View
+                        android:id="@+id/view13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView21"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/burnMessageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/burnMessageImage"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/burn_message"
+                        app:tint="?text_color_hint" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/burnMessageImage"
+                        android:text="@string/burn_message"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <TextView
+                        android:id="@+id/messageBurnTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/_1_month"
+                        android:textColor="?colorPrimary"
+                        android:theme="@style/ProfileTextStyleTwo" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/textView4"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:alpha="0.2"
+                        android:background="?text_color_hint" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

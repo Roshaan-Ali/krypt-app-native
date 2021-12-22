@@ -1,0 +1,71 @@
+com/physphil/android/unitconverterultimate/ui/RecyclerViewItemClickListener.java
+ com.physphil.android.unitconverterultimate.ui.RecyclerViewItemClickListener
+com/physphil/android/unitconverterultimate/settings/PreferencesFragment.java
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment$1
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment$2
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment$3
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment$4
+ com.physphil.android.unitconverterultimate.settings.PreferencesFragment$5
+com/physphil/android/unitconverterultimate/UnitConverterApplication.java
+ com.physphil.android.unitconverterultimate.UnitConverterApplication
+com/physphil/android/unitconverterultimate/models/Unit.java
+ com.physphil.android.unitconverterultimate.models.Unit
+ com.physphil.android.unitconverterultimate.models.Unit$id
+com/physphil/android/unitconverterultimate/presenters/ConversionPresenter.java
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter$1
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter$2
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter$3
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter$4
+ com.physphil.android.unitconverterultimate.presenters.ConversionPresenter$5
+com/physphil/android/unitconverterultimate/BaseActivity.java
+ com.physphil.android.unitconverterultimate.BaseActivity
+com/physphil/android/unitconverterultimate/models/TemperatureUnit.java
+ com.physphil.android.unitconverterultimate.models.TemperatureUnit
+com/physphil/android/unitconverterultimate/presenters/ConversionView.java
+ com.physphil.android.unitconverterultimate.presenters.ConversionView
+com/physphil/android/unitconverterultimate/fragments/ConversionFragment.java
+ com.physphil.android.unitconverterultimate.fragments.ConversionFragment
+ com.physphil.android.unitconverterultimate.fragments.ConversionFragment$1
+ com.physphil.android.unitconverterultimate.fragments.ConversionFragment$2
+ com.physphil.android.unitconverterultimate.fragments.ConversionFragment$3
+com/physphil/android/unitconverterultimate/data/DataAccess.java
+ com.physphil.android.unitconverterultimate.data.DataAccess
+ com.physphil.android.unitconverterultimate.data.DataAccess$1
+com/physphil/android/unitconverterultimate/UnitConverterDebugApplication.java
+ com.physphil.android.unitconverterultimate.UnitConverterDebugApplication
+com/physphil/android/unitconverterultimate/settings/Preferences.java
+ com.physphil.android.unitconverterultimate.settings.Preferences
+com/physphil/android/unitconverterultimate/api/CurrencyService.java
+ com.physphil.android.unitconverterultimate.api.CurrencyService
+com/physphil/android/unitconverterultimate/fragments/HelpDialogFragment.java
+ com.physphil.android.unitconverterultimate.fragments.HelpDialogFragment
+ com.physphil.android.unitconverterultimate.fragments.HelpDialogFragment$1
+ com.physphil.android.unitconverterultimate.fragments.HelpDialogFragment$2
+com/physphil/android/unitconverterultimate/api/models/Envelope.java
+ com.physphil.android.unitconverterultimate.api.models.Envelope
+ com.physphil.android.unitconverterultimate.api.models.Envelope$Cube
+ com.physphil.android.unitconverterultimate.api.models.Envelope$Sender
+com/physphil/android/unitconverterultimate/util/BaseIntentFactory.java
+ com.physphil.android.unitconverterultimate.util.BaseIntentFactory
+com/physphil/android/unitconverterultimate/presenters/MainActivityView.java
+ com.physphil.android.unitconverterultimate.presenters.MainActivityView
+com/physphil/android/unitconverterultimate/settings/PreferencesActivity.java
+ com.physphil.android.unitconverterultimate.settings.PreferencesActivity
+com/physphil/android/unitconverterultimate/api/CurrencyApi.java
+ com.physphil.android.unitconverterultimate.api.CurrencyApi
+com/physphil/android/unitconverterultimate/BuildConfig.java
+ com.physphil.android.unitconverterultimate.BuildConfig
+com/physphil/android/unitconverterultimate/util/Conversions.java
+ com.physphil.android.unitconverterultimate.util.Conversions
+com/physphil/android/unitconverterultimate/MainActivityConverter.java
+ com.physphil.android.unitconverterultimate.MainActivityConverter
+ com.physphil.android.unitconverterultimate.MainActivityConverter$1
+ com.physphil.android.unitconverterultimate.MainActivityConverter$2
+com/physphil/android/unitconverterultimate/models/ConversionState.java
+ com.physphil.android.unitconverterultimate.models.ConversionState
+ com.physphil.android.unitconverterultimate.models.ConversionState$1
+com/physphil/android/unitconverterultimate/models/Conversion.java
+ com.physphil.android.unitconverterultimate.models.Conversion
+ com.physphil.android.unitconverterultimate.models.Conversion$id

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <FrameLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.pyra.krpytapplication.videocallutils.customui.GridVideoViewContainer
+            android:id="@+id/grid_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ViewStub
+            android:id="@id/small_video_view_dock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:inflatedId="@id/small_video_view_dock"
+            android:layout="@layout/small_video_view_dock" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/doctoreNameVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:fontFamily="?mediumFont"
+                android:text="Walter"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/endCallVideo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:background="@drawable/red_oval_background"
+                android:onClick="onHangupClicked"
+                android:padding="10dp"
+                android:src="@drawable/call_end"
+                app:layout_constraintBottom_toTopOf="@+id/camera"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageRotate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:onClick="onSwitchCameraClicked"
+                android:padding="7dp"
+                android:src="@drawable/switch_camera_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/camera"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/white" />
+
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:onClick="onVideoMuteClicked"
+                android:padding="5dp"
+                android:src="@drawable/video_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/micVideo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:onClick="onVoiceMuteClicked"
+                android:padding="5dp"
+                android:src="@drawable/mic_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toEndOf="@+id/camera" />
+
+            <ImageView
+                android:id="@+id/acceptCallVideo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:background="@drawable/green_oval_background"
+                android:onClick="onVoiceCallAccepted"
+                android:padding="10dp"
+                android:src="@drawable/video_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rejectCallVideo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/rejectCallVideo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:background="@drawable/red_oval_background"
+                android:onClick="onHangupClicked"
+                android:padding="10dp"
+                android:src="@drawable/call_end"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/acceptCallVideo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/incomingVideoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="acceptCallVideo,rejectCallVideo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/outGoingVideoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="endCallVideo,imageRotate,camera,micVideo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/layout_audio_group_call" />
+
+
+</FrameLayout>

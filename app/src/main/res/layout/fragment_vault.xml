@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?page_default_bg"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context=".view.fragment.VaultFragment">
+
+                <RelativeLayout
+                    android:id="@+id/galleryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <net.orandja.shadowlayout.ShadowLayout
+                        android:id="@+id/imageLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/black_oval_gradient_bg"
+                        app:shadow_cast_only_background="true"
+                        app:shadow_color="@color/shadow"
+                        app:shadow_radius="10"
+                        app:shadow_with_color="false"
+                        app:shadow_with_css_scale="true"
+                        app:shadow_with_dpi_scale="true">
+
+                        <ImageView
+                            android:id="@+id/imageIcon"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/image_icon" />
+
+                    </net.orandja.shadowlayout.ShadowLayout>
+
+                    <net.orandja.shadowlayout.ShadowLayout
+                        android:id="@+id/videoLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/imageLayout"
+                        android:background="@drawable/black_oval_gradient_bg"
+                        app:shadow_cast_only_background="true"
+                        app:shadow_color="@color/shadow"
+                        app:shadow_radius="10"
+                        app:shadow_with_color="false"
+                        app:shadow_with_css_scale="true"
+                        app:shadow_with_dpi_scale="true">
+
+                        <ImageView
+                            android:id="@+id/videoIcon"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/video_call"
+                            app:tint="@color/white" />
+
+                    </net.orandja.shadowlayout.ShadowLayout>
+
+                    <net.orandja.shadowlayout.ShadowLayout
+                        android:id="@+id/micLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/videoLayout"
+                        android:background="@drawable/black_oval_gradient_bg"
+                        app:shadow_cast_only_background="true"
+                        app:shadow_color="@color/shadow"
+                        app:shadow_radius="10"
+                        app:shadow_with_color="false"
+                        app:shadow_with_css_scale="true"
+                        app:shadow_with_dpi_scale="true">
+
+                        <ImageView
+                            android:id="@+id/micIcon"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/morph_icon" />
+
+                    </net.orandja.shadowlayout.ShadowLayout>
+
+                    <net.orandja.shadowlayout.ShadowLayout
+                        android:id="@+id/documentLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_toEndOf="@id/micLayout"
+                        android:background="@drawable/black_oval_gradient_bg"
+                        app:shadow_cast_only_background="true"
+                        app:shadow_color="@color/shadow"
+                        app:shadow_radius="10"
+                        app:shadow_with_color="false"
+                        app:shadow_with_css_scale="true"
+                        app:shadow_with_dpi_scale="true">
+
+                        <ImageView
+                            android:id="@+id/docIcon"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/book_icon" />
+
+                    </net.orandja.shadowlayout.ShadowLayout>
+
+                    <net.orandja.shadowlayout.ShadowLayout
+                        android:id="@+id/msgLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@id/documentLayout"
+                        android:background="@drawable/black_oval_gradient_bg"
+                        app:shadow_cast_only_background="true"
+                        app:shadow_color="@color/shadow"
+                        app:shadow_radius="10"
+                        app:shadow_with_color="false"
+                        app:shadow_with_css_scale="true"
+                        app:shadow_with_dpi_scale="true">
+
+                        <ImageView
+                            android:id="@+id/messageIcon"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:src="@drawable/burn_message" />
+
+                    </net.orandja.shadowlayout.ShadowLayout>
+
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/topToolbarLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:constraint_referenced_ids="galleryLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/selectionPanel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:translationY="-10dp"
+                    app:cardBackgroundColor="?page_default_bg"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="bottom"
+                        android:background="?page_default_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/toolBar"
+                        app:layout_constraintTop_toTopOf="@+id/searchBarBg">
+
+                        <ImageView
+                            android:id="@+id/backPressed"
+                            android:layout_width="@dimen/_19sdp"
+                            android:layout_height="@dimen/_19sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:padding="3dp"
+                            android:src="@drawable/back_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/selectedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:fontFamily="@font/jost_medium"
+                            android:text="1"
+                            android:textColor="?toolbar_text_color"
+                            android:textSize="@dimen/_14sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/backPressed"
+                            app:layout_constraintStart_toEndOf="@+id/backPressed"
+                            app:layout_constraintTop_toTopOf="@+id/backPressed" />
+
+                        <ImageView
+                            android:id="@+id/forward"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:padding="3dp"
+                            android:src="@drawable/forward_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/delete"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/delete"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:padding="5dp"
+                            android:src="@drawable/delete_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/selectionPanelSaved"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_gravity="bottom"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/backPressedsaved"
+                        android:layout_width="@dimen/_19sdp"
+                        android:layout_height="@dimen/_19sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:padding="3dp"
+                        android:src="@drawable/back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/selectedCountsaved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:fontFamily="@font/jost_medium"
+                        android:text="1"
+                        android:textColor="?toolbar_text_color"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/backPressedsaved"
+                        app:layout_constraintStart_toEndOf="@+id/backPressedsaved"
+                        app:layout_constraintTop_toTopOf="@+id/backPressedsaved" />
+
+                    <ImageView
+                        android:id="@+id/unsave"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:padding="5dp"
+                        android:src="@drawable/vault_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/fabIcon"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:elevation="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/camera_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/cameraFAB"
+            app:layout_constraintEnd_toEndOf="@+id/cameraFAB"
+            app:layout_constraintStart_toStartOf="@+id/cameraFAB"
+            app:layout_constraintTop_toTopOf="@+id/cameraFAB"
+            app:tint="?dialog_bg" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cameraFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_25sdp"
+            android:contentDescription="@string/camera"
+            android:foreground="@drawable/add_contact_fab"
+            app:elevation="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBarLayout"
+            app:spanCount="3"
+            tools:itemCount="12"
+            tools:listitem="@layout/item_vault" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

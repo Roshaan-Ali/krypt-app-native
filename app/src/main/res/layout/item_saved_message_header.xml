@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/topUserImage"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/senderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/jost_regular"
+        android:textColor="?text_color_content"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toEndOf="@id/topUserImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/demo_user_name" />
+
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="@dimen/_6sdp"
+        android:layout_height="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/right_arrow_icon"
+        app:layout_constraintBottom_toBottomOf="@id/senderName"
+        app:layout_constraintStart_toEndOf="@id/senderName"
+        app:layout_constraintTop_toTopOf="@id/senderName"
+        app:tint="?toolbar_icon_color" />
+
+    <TextView
+        android:id="@+id/receiverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/jost_regular"
+        android:textColor="?text_color_content"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toEndOf="@id/arrowIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/demo_user_name" />
+
+    <TextView
+        android:id="@+id/messageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:fontFamily="@font/jost_regular"
+        android:text="@string/demo_date"
+        android:textColor="?text_color_content"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

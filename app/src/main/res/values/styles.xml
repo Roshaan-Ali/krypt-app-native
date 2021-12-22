@@ -1,0 +1,273 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/dark_page_bg</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+
+    <style name="darkTheme" parent="DarkTheme.WithActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor" tools:targetApi="m">@color/dark_page_bg</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="DarkTheme.WithActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="page_default_bg">@color/dark_page_bg</item>
+        <item name="dialog_bg">@color/dialog_bg</item>
+        <item name="toolbar_color">@color/dark_toolbar_color</item>
+        <item name="toolbar_icon_color">@color/dark_toolbar_icon_tint</item>
+        <item name="toolbar_text_color">@color/dark_toolbar_text_color</item>
+        <item name="dialog_text_color">@color/dialog_text_color</item>
+        <item name="primary_text_color">@color/dark_toolbar_text_color</item>
+        <item name="text_color_hint">@color/text_hint_color_white</item>
+        <item name="text_border_color_hint">@color/text_border_color_hint</item>
+        <item name="search_bar_bg">@color/dark_toolbar_search_color</item>
+        <item name="title_color">@color/text_color_white</item>
+        <item name="active_tab_icon_color">@color/active_white_color</item>
+        <item name="inactive_tab_icon_color">@color/inactive_white_color</item>
+        <item name="sub_title_color">@color/text_color_grey</item>
+        <item name="unread_green_color">@color/green_color</item>
+        <item name="dialog_icon_color">@color/grey_icon_tint</item>
+        <item name="negative_text_color">@color/negative_text_color</item>
+        <item name="selected_bg">@color/selected_bg</item>
+        <item name="positive_bg_color">@color/positive_bg_color</item>
+
+        <item name="active_text_color">@color/active_text_color</item>
+        <item name="inactive_text_color">@color/inactive_text_color</item>
+        <item name="text_color_content">@color/text_color_content</item>
+        <item name="fab_color">@color/dark_page_bg</item>
+        <item name="video_img_tint">@color/white</item>
+        <item name="reply_bg_clr">@color/colorPrimaryDark</item>
+        <item name="edit_text_bg_color">@color/dark</item>
+
+        <item name="tint_missed_call">@color/white</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="regularFont">@font/roboto_regular_font</item>
+        <item name="mediumFont">@font/roboto_medium_font</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/colorPrimaryDark</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialogTheme</item>
+
+    </style>
+
+    <style name="LightTheme.WithActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="page_default_bg">@color/light_page_bg</item>
+        <item name="dialog_bg">@color/white</item>
+        <item name="toolbar_color">@color/light_toolbar_color</item>
+        <item name="toolbar_icon_color">@color/light_toolbar_icon_tint</item>
+        <item name="toolbar_text_color">@color/light_toolbar_text_color</item>
+        <item name="dialog_text_color">@color/dialog_text_color_light</item>
+        <item name="primary_text_color">@color/light_toolbar_text_color</item>
+        <item name="text_color_hint">@color/text_hint_color_white_light</item>
+        <item name="text_border_color_hint">@color/text_border_color_hint_light</item>
+        <item name="search_bar_bg">@color/light_toolbar_search_color</item>
+        <item name="title_color">@color/text_color_white_light</item>
+        <item name="active_tab_icon_color">@color/active_white_color_light</item>
+        <item name="inactive_tab_icon_color">@color/inactive_white_color_light</item>
+        <item name="sub_title_color">@color/text_color_grey_light</item>
+        <item name="unread_green_color">@color/green_color_light</item>
+        <item name="dialog_icon_color">@color/grey_icon_tint_light</item>
+        <item name="negative_text_color">@color/negative_text_color_light</item>
+        <item name="selected_bg">@color/selected_bg</item>
+        <item name="positive_bg_color">@color/positive_bg_color_light</item>
+
+        <item name="active_text_color">@color/active_text_color_light</item>
+        <item name="inactive_text_color">@color/inactive_text_color_light</item>
+        <item name="text_color_content">@color/text_color_content_light</item>
+        <item name="fab_color">@color/dark_page_bg</item>
+        <item name="video_img_tint">@color/emoji_black</item>
+        <item name="tint_missed_call">@color/negative_text_color</item>
+
+        <item name="reply_bg_clr">@color/white</item>
+        <item name="edit_text_bg_color">@color/grey</item>
+
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="regularFont">@font/roboto_regular_font</item>
+        <item name="mediumFont">@font/roboto_medium_font</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/colorPrimaryDark</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialogThemeLight</item>
+
+    </style>
+
+    <style name="lightTheme" parent="LightTheme.WithActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="android:statusBarColor" tools:targetApi="m">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+
+    </style>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/dark_page_bg</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyleDark</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyleDark</item>
+    </style>
+
+    <style name="AlertDialogThemeLight" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/white</item>
+        <item name="colorPrimary">@color/emoji_black</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyleLight</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyleLight</item>
+    </style>
+
+    <style name="TitleTextStyleLight" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/emoji_black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TitleTextStyleDark" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BodyTextStyleLight" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/emoji_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BodyTextStyleDark" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="SwitchStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/text_color_grey_light</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">?text_color_hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:elevation">20dp</item>
+        <item name="fontFamily">@font/jost_regular</item>
+    </style>
+
+    <style name="AuthScreenTitleStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?title_color</item>
+        <item name="android:textSize">25sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/jost_bold</item>
+    </style>
+
+    <style name="BurnMessageTitleStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?title_color</item>
+        <item name="android:textSize">26sp</item>
+        <item name="fontFamily">@font/jost_medium</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:elevation">20dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/jost_semibold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ProfileLabelStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/jost_regular</item>
+    </style>
+
+    <style name="ProfileTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?primary_text_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/jost_medium</item>
+    </style>
+
+    <style name="ProfileTextStyleTwo" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?primary_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/jost_regular</item>
+    </style>
+
+    <style name="DialogTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?title_color</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/jost_semibold</item>
+    </style>
+
+    <style name="ChatMessageStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/jost_medium</item>
+    </style>
+
+    <style name="ChatMessageTimeStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?title_color</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/jost_medium</item>
+    </style>
+
+    <style name="PasswordEye" parent="">
+        <item name="android:textColor">?title_color</item>
+        <item name="android:textSize">25sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/jost_bold</item>
+    </style>
+
+</resources>

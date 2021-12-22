@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?toolbar_color"
+        android:padding="@dimen/_5sdp">
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/chatColor"-->
+        <!--            android:layout_width="@dimen/_30sdp"-->
+        <!--            android:layout_height="@dimen/_30sdp"-->
+        <!--            android:background="@drawable/message_bg_oval"-->
+        <!--            android:backgroundTint="@color/bg_four"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chatColor"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:cardBackgroundColor="@color/green_color"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/selectedItem"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/round_yellow_btn_bg"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/chatColor"
+            app:layout_constraintStart_toStartOf="@+id/chatColor"
+            app:layout_constraintTop_toBottomOf="@+id/chatColor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

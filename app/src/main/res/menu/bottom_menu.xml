@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat_tab_icon"
+        android:iconTint="?active_tab_icon_color"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/tab_profile_icon"
+        android:iconTint="?active_tab_icon_color"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/vault"
+        android:icon="@drawable/tab_vault_icon"
+        android:iconTint="?active_tab_icon_color"
+        android:title="Vault" />
+
+</menu>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profileViewModel"
+            type="com.pyra.krpytapplication.viewmodel.ProfileViewModel" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?page_default_bg"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_chat_details">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <View
+                android:id="@+id/leftGuideLine"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/rightGuideLine"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/notification_icon"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notificationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:fontFamily="@font/jost_regular"
+                android:text="@string/notifications"
+                android:textColor="?title_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/notificationIcon"
+                app:layout_constraintStart_toEndOf="@+id/notificationIcon"
+                app:layout_constraintTop_toTopOf="@+id/notificationIcon" />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="?regularFont"
+                android:text="@string/on"
+                android:textColor="?text_color_hint"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/notificationText" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="8dp"
+                android:thumbTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/notificationText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rightGuideLine"
+                app:layout_constraintTop_toTopOf="@+id/notificationText"
+                app:sb_button_color="?page_default_bg"
+                app:sb_checked_color="@color/colorPrimary"
+                app:sb_show_indicator="false" />
+
+            <!--            <Switch-->
+            <!--                android:id="@+id/switch1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:checked="true"-->
+            <!--                android:thumbTint="@color/colorPrimary"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintEnd_toStartOf="@id/rightGuideLine"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:alpha="0.2"
+                android:background="?text_color_hint"
+                app:layout_constraintTop_toBottomOf="@id/notification" />
+
+            <ImageView
+                android:id="@+id/addUserIcon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/add_user"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:tint="?colorPrimary"
+                tools:visibility="@{profileViewModel.canAddMember?View.VISIBLE:View.GONE}" />
+
+            <TextView
+                android:id="@+id/addMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/jost_medium"
+                android:text="@string/add_member"
+                android:textColor="?colorPrimary"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@id/addUserIcon"
+                app:layout_constraintStart_toEndOf="@id/addUserIcon"
+                app:layout_constraintTop_toTopOf="@id/addUserIcon"
+                tools:visibility="@{profileViewModel.canAddMember?View.VISIBLE:View.GONE}" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/addMember">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/memberLists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:alpha="0.7"
+                android:fontFamily="@font/jost_regular"
+                android:text="@string/exit_group"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/exitGroup"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/exitGroup"
+                tools:visibility="@{profileViewModel.isGroup?View.VISIBLE:View.GONE}" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:alpha="0.7"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintBottom_toBottomOf="@+id/exitGroup"
+                app:layout_constraintStart_toStartOf="@+id/exitGroup"
+                app:layout_constraintTop_toTopOf="@+id/exitGroup"
+                app:tint="@color/red_color"
+                tools:visibility="@{profileViewModel.isGroup?View.VISIBLE:View.GONE}" />
+
+            <View
+                android:id="@+id/exitGroup"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+                app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+                tools:visibility="@{profileViewModel.isGroup?View.VISIBLE:View.GONE}" />
+
+            <!--            <androidx.constraintlayout.widget.Group-->
+            <!--                android:id="@+id/notificationGroup"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:constraint_referenced_ids="notification,switch1,divider,notificationText"-->
+            <!--                tools:visibility="@{profileViewModel.isGroup?View.GONE:View.VISIBLE}" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

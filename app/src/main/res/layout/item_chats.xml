@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginBottom="4dp"
+        android:background="?page_default_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        tools:ignore="Deprecated,MissingPrefix,RtlHardcoded">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_profile_icon_blue"
+                    app:civ_border_width="0dp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/remove_view_check"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/yellow_oval_background" />
+
+            <ImageView
+                android:id="@+id/chatSelected"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:background="@drawable/yellow_oval_background"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/chat_selected" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/lastMsgTime"
+                android:fontFamily="@font/jost_medium"
+                android:singleLine="true"
+                android:text="@string/demo_user_name"
+                android:textColor="?title_color"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/lastMsgTime"
+                android:orientation="horizontal">
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:id="@+id/lastMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="50dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Hi How are you?"
+                    android:textColor="?sub_title_color"
+                    android:textSize="12sp"
+                    tools:ignore="Deprecated" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lastMsgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/jost_medium"
+                android:singleLine="true"
+                android:text="12.50 PM"
+                android:textColor="?sub_title_color"
+                android:textSize="12sp"
+                android:visibility="visible"
+                tools:ignore="Deprecated,RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userName"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="3dp"
+                android:animateLayoutChanges="true"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/unreadCountText"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/chat_red_oval_background"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

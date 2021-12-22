@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateSectionHeader"
+            app:layout_goneMarginTop="5dp">
+
+            <include layout="@layout/item_saved_message_header" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/dateSectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/date_header_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="?regularFont"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="7dp"
+            android:text="yesterday"
+            android:textColor="?toolbar_text_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/selectedLayout"
+            layout="@layout/sender_selected_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerText">
+
+            <ImageView
+                android:id="@+id/senderCorner"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/chat_bubble_corner_sender"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/chatBubbleColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/chat_bubble_bg_sender"
+                android:minWidth="@dimen/_200sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/layoutReply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:visibility="visible">
+
+                    <include layout="@layout/include_item_reply" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/messageTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:theme="@style/ChatMessageTimeStyle"
+                        app:layout_constraintBottom_toBottomOf="@id/messageStatus"
+                        app:layout_constraintEnd_toStartOf="@id/messageStatus"
+                        tools:text="1.17 PM" />
+
+                    <ImageView
+                        android:id="@+id/messageStatus"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:src="@drawable/ic_seen_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/documentDetails" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/documentDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+                            android:id="@+id/voicePlayerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:enableVisualizer="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:playPauseCornerRadius="100"
+                            app:playProgressbarColor="#ff7700"
+                            app:seekBarProgressColor="#000"
+                            app:showShareButton="false"
+                            app:showTiming="false"
+                            app:viewBackground="@color/transparent"
+                            app:viewCornerRadius="100"
+                            app:visualizationNotPlayedColor="@color/emoji_black"
+                            app:visualizationPlayedColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/messageContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/jost_regular"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="?toolbar_text_color"
+                            android:textSize="@dimen/_11sdp"
+                            android:visibility="gone"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintStart_toEndOf="@+id/playPauseLayout"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="File Name (1)" />
+
+                        <RelativeLayout
+                            android:id="@+id/playPauseLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:background="@drawable/rounded_white_bg"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <include
+                                android:id="@+id/uploadingLayout"
+                                layout="@layout/uploading_layout"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:visibility="gone" />
+
+                            <include
+                                android:id="@id/uploadLayout"
+                                layout="@layout/upload_layout"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:visibility="gone" />
+
+                            <include
+                                android:id="@id/uploadedLayout"
+                                layout="@layout/play_video"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/pause"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:padding="2dp"
+                                android:src="@drawable/ic_pause"
+                                android:visibility="gone"
+                                app:tint="@color/blue" />
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

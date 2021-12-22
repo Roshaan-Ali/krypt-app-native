@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="page_default_bg" format="color" />
+    <attr name="dialog_bg" format="color" />
+    <attr name="toolbar_color" format="color" />
+    <attr name="toolbar_icon_color" format="color" />
+    <attr name="toolbar_text_color" format="color" />
+    <attr name="active_tab_icon_color" format="color" />
+    <attr name="inactive_tab_icon_color" format="color" />
+    <attr name="text_color_hint" format="color" />
+    <attr name="text_border_color_hint" format="color" />
+    <attr name="search_bar_bg" format="color" />
+    <attr name="primary_text_color" format="color" />
+    <attr name="title_color" format="color" />
+    <attr name="sub_title_color" format="color" />
+    <attr name="unread_green_color" format="color" />
+    <attr name="dialog_text_color" format="color" />
+    <attr name="dialog_icon_color" format="color" />
+    <attr name="negative_text_color" format="color" />
+    <attr name="selected_bg" format="color" />
+    <attr name="positive_bg_color" format="color" />
+    <attr name="active_text_color" format="color" />
+    <attr name="inactive_text_color" format="color" />
+    <attr name="text_color_content" format="color" />
+    <attr name="regularFont" format="color" />
+    <attr name="mediumFont" format="color" />
+    <attr name="fab_color" format="color" />
+    <attr name="reply_bg_clr" format="color" />
+    <attr name="edit_text_bg_color" format="color" />
+
+    <attr name="video_img_tint" format="color" />
+    <attr name="tint_missed_call" format="color" />
+
+</resources>

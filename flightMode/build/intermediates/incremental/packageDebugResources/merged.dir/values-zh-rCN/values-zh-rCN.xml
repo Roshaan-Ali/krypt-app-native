@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CheckBox">飞行模式开/关</string>
+    <string name="FlightModeOff">飞行模式已关闭!</string>
+    <string name="FlightModeOn">飞行模式已开启!</string>
+    <string name="app_name">飞行模式</string>
+    <string name="menu_settings">设置</string>
+    <string name="title_activity_main">飞行模式设定</string>
+</resources>

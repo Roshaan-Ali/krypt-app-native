@@ -1,0 +1,44 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flightmode"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:6:5-8:41
+8        android:minSdkVersion="8"
+8-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:7:9-34
+9        android:targetSdkVersion="19" />
+9-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:8:9-38
+10
+11    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+11-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:10:5-73
+11-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:10:22-70
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:11:5-76
+12-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:11:22-73
+13    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+13-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:12:5-76
+13-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:12:22-73
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:13:5-79
+14-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:13:22-76
+15    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+15-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:14:5-79
+15-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:14:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:15:5-68
+16-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:15:22-65
+17
+18    <application>
+18-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:18:5-24:19
+19        <activity
+19-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:19:9-23:20
+20            android:name="com.example.flightmode.MainFlightActivity"
+20-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:20:13-47
+21            android:label="@string/title_activity_main" >
+21-->C:\dev\Apps\Krypt-App\flightMode\src\main\AndroidManifest.xml:21:13-56
+22        </activity>
+23    </application>
+24
+25</manifest>

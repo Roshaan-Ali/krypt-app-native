@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?page_default_bg">
+
+        <ImageView
+            android:id="@+id/fileIcon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/pptx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/jost_semibold"
+            android:textColor="?primary_text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toEndOf="@id/fileIcon"
+            app:layout_constraintTop_toTopOf="@id/fileIcon"
+            tools:text="@string/demo_file_name" />
+
+        <TextView
+            android:id="@+id/fileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/jost_semibold"
+            android:text="@string/demo_size"
+            android:textColor="?text_color_content"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/fileIcon"
+            app:layout_constraintTop_toBottomOf="@id/fileName" />
+
+        <TextView
+            android:id="@+id/fileType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/jost_semibold"
+            android:textColor="?text_color_content"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/fileSize"
+            app:layout_constraintTop_toBottomOf="@id/fileName"
+            tools:text="@string/demo_file_type" />
+
+        <TextView
+            android:id="@+id/fileDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/jost_medium"
+            android:text="@string/demo_file_date"
+            android:textColor="?text_color_content"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fileName" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:alpha="0.2"
+            android:background="?text_color_hint"
+            app:layout_constraintTop_toBottomOf="@id/fileDate" />
+
+        <View
+            android:id="@+id/selectedView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/selected_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/selectedImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="3dp"
+            android:src="@drawable/chat_selected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,7 @@
+com/example/flightmode/MainFlightActivity.java
+ com.example.flightmode.MainFlightActivity
+ com.example.flightmode.MainFlightActivity$1
+ com.example.flightmode.MainFlightActivity$2
+ com.example.flightmode.MainFlightActivity$3
+com/example/flightmode/BuildConfig.java
+ com.example.flightmode.BuildConfig

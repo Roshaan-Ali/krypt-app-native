@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "758808480183",
+    "firebase_url": "https://krypt-1b052.firebaseio.com",
+    "project_id": "krypt-1b052",
+    "storage_bucket": "krypt-1b052.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758808480183:android:b0b315e7e6a66b9e824032",
+        "android_client_info": {
+          "package_name": "com.krypt.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758808480183-gcnm788o4jfs0tmprtg63cclci4uffnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.krypt.chat",
+            "certificate_hash": "da9b7a83fe1fa3066bf7c2ac7dc78b6af77113bd"
+          }
+        },
+        {
+          "client_id": "758808480183-6hc0tc0iunegiis4eg6p838g7j3jsg4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTgjHRuiOA4ZYGCjQVVxwP_bO7VcjDYR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758808480183-6hc0tc0iunegiis4eg6p838g7j3jsg4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

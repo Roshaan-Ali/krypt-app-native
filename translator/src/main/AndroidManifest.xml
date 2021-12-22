@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apaar97.translate">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".MainTranslatorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".AboutTranslatorActivity"
+            android:label="@string/about"
+            android:parentActivityName=".MainTranslatorActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainTranslatorActivity" />
+        </activity>
+        <activity
+            android:name=".ConversationActivity"
+            android:label="@string/new_conversation"
+            android:theme="@style/Theme.AppCompat"
+            android:parentActivityName=".MainTranslatorActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainTranslatorActivity" />
+        </activity>
+        <activity
+            android:name=".TranslationActivity"
+            android:label="@string/new_translate"
+            android:parentActivityName=".MainTranslatorActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainTranslatorActivity" />
+        </activity>
+    </application>
+
+</manifest>

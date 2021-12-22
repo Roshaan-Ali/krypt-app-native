@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?page_default_bg"
+    tools:context=".view.activity.CallActivity">
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:visibility="visible"
+        android:id="@+id/videoCallContents"
+        app:constraint_referenced_ids="switchCameraIcon,localVideoContainer,biggerVideoLayout"
+        android:layout_height="0dp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:id="@+id/audioCallContents"
+        app:constraint_referenced_ids="switchCallsIcon,userImage,userIcon"
+        android:layout_height="0dp"/>
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:id="@+id/biggerVideoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="?page_default_bg"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/userImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="?page_default_bg"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="?mediumFont"
+        android:text="@string/demo_user_name"
+        android:textColor="?primary_text_color"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/callStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="?mediumFont"
+        android:text="@string/waiting"
+        android:textColor="?primary_text_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="@id/userName"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/userIcon"
+        android:src="@drawable/call_user_icon"
+        app:tint="?toolbar_icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintWidth_percent="0.334"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/mute"
+        android:id="@+id/muteIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="?toolbar_icon_color" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintWidth_percent="0.334"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/switch_camera_icon"
+        android:id="@+id/switchCameraIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/muteIcon"
+        app:tint="?toolbar_icon_color" />
+
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.334"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/video_icon"
+        android:id="@+id/switchCallsIcon"
+        app:layout_constraintStart_toEndOf="@id/muteIcon"
+        app:layout_constraintTop_toTopOf="@id/muteIcon"
+        app:tint="?toolbar_icon_color" />
+
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.334"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/speaker_icon"
+        android:id="@+id/speakerIcon"
+        app:layout_constraintTop_toTopOf="@id/muteIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="?toolbar_icon_color" />
+
+    <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:src="@drawable/end_call_icon"
+        app:tint="@color/red_color"
+        android:id="@+id/endCallIcon"
+        android:onClick="onEndCallClicked"
+        app:layout_constraintBottom_toTopOf="@id/muteIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/localVideoContainer"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/endCallIcon"
+        android:background="@android:color/darker_gray"
+        android:layout_marginRight="@dimen/_10sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="?page_default_bg">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="?mediumFont"
+        android:text="@string/create_room"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectedView"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/voiceCall"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageView
+        android:id="@+id/videoCall"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/video_call"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/voiceCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/voiceCall"
+        app:tint="?toolbar_icon_color" />
+
+
+    <ImageView
+        android:id="@+id/voiceCall"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/call_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedView"
+        app:layout_constraintEnd_toStartOf="@+id/videoCall"
+        app:layout_constraintTop_toTopOf="@+id/selectedView"
+        app:tint="?toolbar_icon_color" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groupMembers"
+        android:layout_width="0dp"
+        app:layout_constrainedHeight="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/selectedView"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Do Now Disturb
+  Copyright (C) 2017 Maciej Dems <macdems@gmail.com>
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software Foundation,
+  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+-->
+<resources>
+    <string name="app_name">Do Now Disturb</string>
+    <string name="policy_control_disabled">
+        Do Not Disturb access is necessary for proper tile function.
+        You must enable this setting, before you start using a tile.</string>
+    <string name="enable_button">Enable</string>
+    <string name="tile_settings">Tile Settings</string>
+    <string name="silence_mode_label">Silence mode activated by the tile</string>
+    <string-array name="silence_mode_labels">
+        <item>Priority only</item>
+        <item>Alarms only</item>
+        <item>Total silence</item>
+    </string-array>
+    <string-array name="silence_mode_values" translatable="false">
+        <item>priority</item>
+        <item>alarms</item>
+        <item>none</item>
+    </string-array>
+    <string name="show_notification_label">Show notification</string>
+    <string name="dialog_settings">Dialog Settings</string>
+    <string name="dark_theme_label">Use dark theme</string>
+    <string name="tile_label">Do Not Disturb</string>
+    <string name="select_end_time">Do not disturb until</string>
+    <string name="keep_silent">Keep</string>
+    <string name="do_not_disturb_until_message" formatted="false">Silenced until %d:%02d</string>
+    <string name="click_to_turn_off">Click to turn off</string>
+    <string name="turned_off">Do Not Disturb mode turned off</string>
+    <string name="channel_name">Do Now Disturb</string>
+    <string name="channel_description">Do Now Disturb notifications</string>
+</resources>
